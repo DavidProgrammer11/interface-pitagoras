@@ -2,6 +2,10 @@ from math import *
 import tkinter as tk
 import ttkbootstrap as ttk
 
+"""This program calculates the missing side of a right triangle using the Pythagorean theorem.
+You need to input two sides, and it will calculate the third side. It also visually represents 
+the triangle on a canvas."""
+
 # Variables
 maxsize = 140
 minsize = 40
@@ -16,7 +20,7 @@ window.title("App Chapter_Opener")
 # String
 resultado = tk.StringVar()
  
-# Mostrar los resultados y dibujar el triangulo
+# Show Result
 def MostrarResultado():
 	global canvas
 	global triangle
