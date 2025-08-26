@@ -7,7 +7,8 @@ You need to input two sides, and it will calculate the third side. It also visua
 the triangle on a canvas."""
 
 # Variables
-maxsize = 140
+# Size limits for drawing the triangle in the canvas in pixels
+maxsize = 240
 minsize = 40
 
 
@@ -19,7 +20,7 @@ window.title("Interface Pitagoras")
 
 # String
 resultado = tk.StringVar()
- 
+
 # Show Result
 def MostrarResultado():
 	global canvas
