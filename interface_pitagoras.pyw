@@ -15,7 +15,7 @@ minsize = 40
 window = ttk.Window(themename = "superhero")
 window.geometry("400x400")
 window.resizable(False,False)
-window.title("App Chapter_Opener")
+window.title("Interface Pitagoras")
 
 # String
 resultado = tk.StringVar()
