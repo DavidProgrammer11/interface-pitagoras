@@ -2,6 +2,11 @@ from math import *
 import tkinter as tk
 import ttkbootstrap as ttk
 
+# Variables
+maxsize = 140
+minsize = 40
+
+
 # Ventana
 window = ttk.Window(themename = "superhero")
 window.geometry("400x400")
@@ -37,38 +42,38 @@ def MostrarResultado():
 	except:
 			resultado.set(f"Error al ingresar")
 	finally:
-		if hip > 140:
-			reason = hip/140
+		if hip > maxsize:
+			reason = hip/maxsize
 			canvas.place(x = 10, y = 230)
 			triangle = canvas.create_polygon((20,20 ,
 				(catB/reason)+20,(catA/reason)+20 ,20,(catA/reason)+20), 
 				fill = "#54B2FF",outline = "black")
-		elif catA > 140:
-			reason = catA/140
+		elif catA > maxsize:
+			reason = catA/maxsize
 			canvas.place(x = 10, y = 230)
 			triangle = canvas.create_polygon((20,20 ,
 				(catB/reason)+20,(catA/reason)+20 ,20,(catA/reason)+20), 
 				fill = "#54B2FF",outline = "black")
-		elif catB > 140:
-			reason = catB/150
+		elif catB > maxsize:
+			reason = catB/maxsize
 			canvas.place(x = 10, y = 230)
 			triangle = canvas.create_polygon((20,20 ,
 				(catB/reason)+20,(catA/reason)+20 ,20,(catA/reason)+20), 
 				fill = "#54B2FF",outline = "black")
-		elif hip < 40:
-			reason = 40/hip
+		elif hip < minsize:
+			reason = minsize/hip
 			canvas.place(x = 10, y = 230)
 			triangle = canvas.create_polygon((20,20 ,
 				(catB*reason)+20,(catA*reason)+20 ,20,(catA*reason)+20), 
 				fill = "#54B2FF",outline = "black")
-		elif catB < 40:
-			reason = 40/catB
+		elif catB < minsize:
+			reason = minsize/catB
 			canvas.place(x = 10, y = 230)
 			triangle = canvas.create_polygon((20,20 ,
 				(catB*reason)+20,(catA*reason)+20 ,20,(catA*reason)+20), 
 				fill = "#54B2FF",outline = "black")
-		elif catA < 40:
-			reason = 40/catA
+		elif catA < minsize:
+			reason = minsize/catA
 			canvas.place(x = 10, y = 230)
 			triangle = canvas.create_polygon((20,20 ,(catB*reason)+20,
 				(catA*reason)+20 ,20,(catA*reason)+20), 
